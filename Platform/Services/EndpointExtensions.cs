@@ -4,7 +4,7 @@ namespace Microsoft.AspNetCore.Builder
 {
     public static class EndpointExtensions
     {
-        public static void MapEndpoint<T>(this IEndpointRouteBuilder app,
+        public static IEndpointConventionBuilder MapEndpoint<T>(this IEndpointRouteBuilder app,
             string path, string methodName = "Endpoint")
         {
             MethodInfo? methodInfo = typeof(T).GetMethod(methodName);
@@ -18,7 +18,7 @@ namespace Microsoft.AspNetCore.Builder
 
             ParameterInfo[] methodParams = methodInfo!.GetParameters();
 
-            app.MapGet(path, context =>
+            return app.MapGet(path, context =>
             {
                 T endpointInstance =
                     ActivatorUtilities.CreateInstance<T>

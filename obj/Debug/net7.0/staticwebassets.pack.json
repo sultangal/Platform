@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\admin\\source\\repos\\Platform\\wwwroot\\error.html",
+      "PackagePath": "staticwebassets\\error.html"
+    },
+    {
       "Id": "C:\\Users\\admin\\source\\repos\\Platform\\wwwroot\\lib\\bootstrap\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\css\\bootstrap-grid.css"
     },
